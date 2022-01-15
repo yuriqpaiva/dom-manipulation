@@ -1,13 +1,4 @@
-const BotaoConclui = (atualiza, id) => {
-  const botaoConclui = document.createElement('button');
-  botaoConclui.classList.add('check-button');
-  botaoConclui.innerText = 'concluir';
-
-  botaoConclui.addEventListener('click', () => concluirTarefa(atualiza, id));
-
-  return botaoConclui;
-};
-
+// função responsável por inverter o estado da propriedade `concluida`
 const concluirTarefa = (atualiza, id) => {
   const tarefasCadastradas = JSON.parse(localStorage.getItem('tarefas'));
 
@@ -16,6 +7,16 @@ const concluirTarefa = (atualiza, id) => {
   localStorage.setItem('tarefas', JSON.stringify(tarefasCadastradas));
 
   atualiza();
+};
+
+const BotaoConclui = (atualiza, id) => {
+  const botaoConclui = document.createElement('button');
+  botaoConclui.classList.add('check-button');
+  botaoConclui.innerText = 'concluir';
+
+  botaoConclui.addEventListener('click', () => concluirTarefa(atualiza, id));
+
+  return botaoConclui;
 };
 
 export default BotaoConclui;

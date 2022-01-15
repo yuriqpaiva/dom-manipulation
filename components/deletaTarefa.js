@@ -1,3 +1,4 @@
+// função responsável por deletar a tarefa ao clicar no botão
 const deletarTarefa = (atualiza, id) => {
   const index = id;
   const tarefasCadastradas = JSON.parse(localStorage.getItem('tarefas'));
