@@ -23,6 +23,8 @@ const criarTarefa = (event) => {
   lista.appendChild(tarefa); // Adicionando novo filho
 };
 
+// Selecionando botao Novo Item
 const novaTarefa = document.querySelector('[data-form-button]');
 
+// Atribuindo evento de click para o botão, criando a tarefa
 novaTarefa.addEventListener('click', criarTarefa);
